@@ -142,6 +142,34 @@
         .footer-icons a:hover {
             color: #6a11cb;
         }
+
+        /* New styles for row-wise certification layout */
+        .certifications-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .certification {
+            flex: 1 1 calc(100% - 20px); /* Full width for the first row */
+            box-sizing: border-box;
+        }
+
+        .certification:nth-child(2), .certification:nth-child(3) {
+            flex: 1 1 calc(50% - 20px); /* Half width for the second row */
+        }
+
+        .certification:nth-child(4), .certification:nth-child(5) {
+            flex: 1 1 calc(50% - 20px); /* Half width for the third row */
+        }
+
+        @media (max-width: 768px) {
+            .certification:nth-child(2), .certification:nth-child(3),
+            .certification:nth-child(4), .certification:nth-child(5) {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -163,10 +191,10 @@
         <p>Hello! I'm Syed Hasan Moinuddin Quadri, a 3rd Year CSE Student.</p>
         <a href="resume.pdf" download="Syed_Hasan_Resume.pdf" target="_blank">
             <button class="btn poppins">Resume</button>
-            <a href="http://www.linkedin.com/in/syed-hasan-930009232" target="_blank">
-                <button class="btn poppins">Let's Talk</button>
         </a>
-     
+        <a href="http://www.linkedin.com/in/syed-hasan-930009232" target="_blank">
+            <button class="btn poppins">Let's Talk</button>
+        </a>
     </section>
 
     <section id="about">
@@ -207,41 +235,43 @@
 
     <section id="certifications">
         <h2>Certifications</h2>
-        <div class="certification">
-            <h3>Certification 1</h3>
-            <p>Issued by: RAREMINDS</p>
-            <p>Date: OCTOBER 2023</p>
-            <img src="Assets/c1.jpg" alt="Certification 1" width="350">
-        </div>
-        <div class="certification">
-            <h3>Certification 2</h3>
-            <p>Issued by: GOOGLE</p>
-            <p>Date: DECEMBER 2023</p>
-            <img src="Assets/c2.jpg" alt="Certification 2" width="350">
-        </div>
-        <div class="certification">
-            <h3>Certification 3</h3>
-            <p>Issued by: GOOGLE</p>
-            <p>Date: JANUARY 2023</p>
-            <img src="Assets/c3.jpg" alt="Certification 2" width="350">
-        </div>
-        <div class="certification">
-            <h3>Certification 4</h3>
-            <p>Issued by: LANQUILL</p>
-            <p>Date: MAY 2024</p>
-            <img src="Assets/c4.jpg" alt="Certification 2" width="350">
-        </div>
-        <div class="certification">
-            <h3>Certification 5</h3>
-            <p>Issued by: LANQUILL</p>
-            <p>Date: MAY 2024</p>
-            <img src="Assets/c5.jpg" alt="Certification 2" width="350">
+        <div class="certifications-container">
+            <div class="certification">
+                <h3>Certification 1</h3>
+                <p>Issued by: RAREMINDS</p>
+                <p>Date: OCTOBER 2023</p>
+                <img src="Assets/c1.jpg" alt="Certification 1" width="350">
+            </div>
+            <div class="certification">
+                <h3>Certification 2</h3>
+                <p>Issued by: GOOGLE</p>
+                <p>Date: DECEMBER 2023</p>
+                <img src="Assets/c2.jpg" alt="Certification 2" width="350">
+            </div>
+            <div class="certification">
+                <h3>Certification 3</h3>
+                <p>Issued by: GOOGLE</p>
+                <p>Date: JANUARY 2023</p>
+                <img src="Assets/c3.jpg" alt="Certification 3" width="350">
+            </div>
+            <div class="certification">
+                <h3>Certification 4</h3>
+                <p>Issued by: LANQUILL</p>
+                <p>Date: MAY 2024</p>
+                <img src="Assets/c4.jpg" alt="Certification 4" width="350">
+            </div>
+            <div class="certification">
+                <h3>Certification 5</h3>
+                <p>Issued by: LANQUILL</p>
+                <p>Date: MAY 2024</p>
+                <img src="Assets/c5.jpg" alt="Certification 5" width="350">
+            </div>
         </div>
     </section>
 
     <section id="contactme">
         <h2>Contact Me</h2>
-        <p>You can reach me at: <a href="mailto:youremail@example.com">ruhanquadri77@gmail.com</a></p>
+        <p>You can reach me at: <a href="mailto:ruhanquadri77@gmail.com">ruhanquadri77@gmail.com</a></p>
     </section>
 
     <footer>
